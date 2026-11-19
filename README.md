@@ -51,7 +51,7 @@ These items are also marked as HTML comments (`TODO-VERIFY`) in `index.html` and
 - Formal Swap-Free T&C (S-07) may still differ from the 11 November 2026 announcement (deposit tiers, 5-day gold holding rule). The page follows the 11/11 announcement and states that company terms apply.
 - Numeric spread values after the 11/11 update are not in the source set, so they are not listed.
 - Payment, deposit and withdrawal methods for Syria other than USDT deposit still need per-method confirmation; only USDT deposit (minimum 10 USD for Syrian clients) is listed.
-- A Syria-specific Telegram channel or fanpage has not been created yet. CTAs use WeGolden MENA: `https://t.me/wegoldenmena` and `https://www.facebook.com/WeGoldenMena`.
+- Syria Facebook (`https://www.facebook.com/WeGoldenSyria`) and Instagram (`https://www.instagram.com/wegolden_syria/`) are live. The Telegram channel is still the MENA channel: `https://t.me/wegoldenmena`.
 - Set `WHATSAPP_NUMBER` when the business number is connected. WhatsApp Business may not reach `+963`; keep Telegram as the fallback.
 - No segregated-funds / client-money wording was found in `/workspace/datahub/wegolden-mena/` or the learning channel, so it is omitted from trust badges.
 - Arabic copy still needs a native-speaker review.

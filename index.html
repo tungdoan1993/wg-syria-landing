@@ -520,6 +520,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 8px;
       min-height: 48px;
       border-radius: 10px;
       padding: 12px 16px;
@@ -531,6 +532,32 @@
     }
     .channel-wa { background: #128c47; color: #fff; border-color: #128c47; }
     .channel-tg { background: #229ed9; color: #fff; border-color: #229ed9; }
+    .channel-fb { background: #1877f2; color: #fff; border-color: #1877f2; }
+    .channel-ig { background: #c13584; color: #fff; border-color: #c13584; }
+    .channel svg { width: 20px; height: 20px; flex: 0 0 20px; display: block; }
+    .social-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 12px 0 16px;
+    }
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      min-height: 44px;
+      border-radius: 50%;
+      color: #fff;
+      text-decoration: none;
+    }
+    .social-icon:focus { outline: 3px solid var(--gold); outline-offset: 3px; }
+    .social-icon svg { width: 22px; height: 22px; display: block; }
+    .social-tg { background: #229ed9; }
+    .social-fb { background: #1877f2; }
+    .social-ig { background: #c13584; }
     .micro {
       font-size: 14px;
       color: var(--muted);
@@ -624,7 +651,7 @@
 
       .sop-grid { grid-template-columns: 1fr 1fr 1fr; }
       .trust-badges { grid-template-columns: 1fr 1fr 1fr; }
-      .contact-channels { grid-template-columns: 1fr 1fr 1fr; }
+      .contact-channels { grid-template-columns: 1fr 1fr; }
       .section-cta .cta-row { justify-content: flex-start; }
       .wa-float { bottom: 24px; }
     }
@@ -657,7 +684,7 @@
     - Formal Swap-Free T&C (S-07) may still differ from the 11 Nov 2026 announcement (deposit tiers, 5-day gold holding rule). This page follows the 11/11 announcement and states that company terms apply.
     - Numeric spread values after the 11/11 update are not in the source set, so they are not listed.
     - Payment / deposit / withdrawal methods for Syria other than USDT deposit still need per-method confirmation; only USDT deposit (minimum 10 USD for Syrian clients) is listed.
-    - A Syria-specific Telegram channel or fanpage has not been created yet. CTAs use WeGolden MENA: https://t.me/wegoldenmena and https://www.facebook.com/WeGoldenMena
+    - Syria Facebook (https://www.facebook.com/WeGoldenSyria) and Instagram (https://www.instagram.com/wegolden_syria/) are live. The Telegram channel is still the MENA channel: https://t.me/wegoldenmena.
     - WhatsApp Business may not reach Syrian numbers using +963. Set WHATSAPP_NUMBER below when the business number is connected; keep Telegram as the fallback.
     - No segregated-funds / client-money wording was found in /workspace/datahub/wegolden-mena/ or the learning channel, so it is omitted from trust badges.
     - Arabic copy still needs a native-speaker review.
@@ -862,16 +889,17 @@
             <input id="contact" name="contact" type="text" placeholder="+963  أو  @username" autocomplete="tel" dir="ltr">
           </div>
           <button class="btn btn-primary btn-block" type="submit">إرسال طلب التواصل</button>
-          <p class="form-note">سنتواصل معك عبر البريد أو تيليغرام أو ماسنجر، أو واتساب بعد ربط الرقم الرسمي. خدمة واتساب للأعمال قد لا تصل إلى الأرقام السورية التي تستخدم الرمز <span class="ltr">+963</span>؛ تيليغرام يبقى البديل المتاح.</p>
+          <p class="form-note">سنتواصل معك عبر البريد أو تيليغرام أو فيسبوك وإنستغرام، أو واتساب بعد ربط الرقم الرسمي. قناة تيليغرام الحالية هي قناة <span class="ltr">WeGolden MENA</span>. خدمة واتساب للأعمال قد لا تصل إلى الأرقام السورية التي تستخدم الرمز <span class="ltr">+963</span>؛ تيليغرام يبقى البديل المتاح.</p>
           <aside class="risk" role="note">تحذير المخاطر: تداول الفوركس وعقود الفروقات <span class="ltr">(CFD)</span> بأدوات ذات رافعة مالية ينطوي على درجة مخاطر عالية، وقد يؤدي إلى خسارة رأس المال بالكامل. لا يناسب جميع المستثمرين. الأداء السابق لا يضمن النتائج المستقبلية. هذا المحتوى لأغراض تعريفية فقط، وليس استشارة استثمارية ولا وعدًا بالربح. يُرجى الاطلاع على الشروط والأحكام وعلى تحذير المخاطر الكامل قبل فتح الحساب. <a href="https://wegolden-mena.com/legal-compliance/" target="_blank" rel="noopener">الاطلاع على تحذير المخاطر الكامل</a></aside>
         </form>
         <div id="contact">
           <h3>تواصل معنا</h3>
-          <p class="micro">اختر القناة الأنسب لك. واتساب سيُفعَّل بعد ربط الرقم الرسمي.</p>
+          <p class="micro">اختر القناة الأنسب لك. واتساب سيُفعَّل بعد ربط الرقم الرسمي. قناة تيليغرام الحالية هي قناة <span class="ltr">WeGolden MENA</span>.</p>
           <div class="contact-channels">
-            <a class="channel channel-wa" data-wa-link href="https://wa.me/PLACEHOLDER_NUMBER?text=" rel="noopener noreferrer" target="_blank">واتساب</a>
-            <a class="channel channel-tg" href="https://t.me/wegoldenmena" rel="noopener noreferrer" target="_blank">تيليغرام</a>
-            <a class="channel" href="https://www.facebook.com/WeGoldenMena" rel="noopener noreferrer" target="_blank">ماسنجر</a>
+            <a class="channel channel-wa" data-wa-link href="https://wa.me/PLACEHOLDER_NUMBER?text=" rel="noopener noreferrer" target="_blank" aria-label="واتساب">واتساب</a>
+            <a class="channel channel-tg" href="https://t.me/wegoldenmena" rel="noopener noreferrer" target="_blank" aria-label="تيليغرام WeGolden MENA"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M21.5 3.3 18.3 20.1c-.24 1.07-.87 1.33-1.76.83l-4.87-3.59-2.35 2.26c-.26.26-.48.48-.98.48l.35-4.97 9.05-8.18c.39-.35-.09-.54-.6-.2l-11.18 7.04-4.82-1.5c-1.05-.33-1.07-1.05.22-1.56L20 3.05c.87-.33 1.63.2 1.5.25z"/></svg>تيليغرام</a>
+            <a class="channel channel-fb" href="https://www.facebook.com/WeGoldenSyria" rel="noopener noreferrer" target="_blank" aria-label="فيسبوك WeGolden Syria"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07C2 17.1 5.66 21.26 10.44 22v-7.03H7.9v-2.9h2.54V9.85c0-2.52 1.49-3.91 3.77-3.91 1.09 0 2.24.2 2.24.2v2.48h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.44 2.9h-2.34V22C18.34 21.26 22 17.1 22 12.07z"/></svg>فيسبوك</a>
+            <a class="channel channel-ig" href="https://www.instagram.com/wegolden_syria/" rel="noopener noreferrer" target="_blank" aria-label="إنستغرام WeGolden Syria"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm0 2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H7zm11 1.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4zM12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>إنستغرام</a>
           </div>
         </div>
       </div>
@@ -974,7 +1002,7 @@
         </details>
         <details class="faq">
           <summary>كيف أتواصل معكم؟</summary>
-          <p>يمكنكم التواصل عبر تيليغرام أو ماسنجر فيسبوك، أو عبر واتساب بعد ربط الرقم الرسمي. خدمة واتساب للأعمال قد لا تصل إلى الأرقام السورية (<span class="ltr">+963</span>)؛ تيليغرام يبقى البديل المتاح.</p>
+          <p>يمكنكم التواصل عبر تيليغرام، أو عبر صفحتي فيسبوك وإنستغرام <span class="ltr">WeGolden Syria</span>، أو عبر واتساب بعد ربط الرقم الرسمي. قناة تيليغرام الحالية هي قناة <span class="ltr">WeGolden MENA</span>. خدمة واتساب للأعمال قد لا تصل إلى الأرقام السورية (<span class="ltr">+963</span>)؛ تيليغرام يبقى البديل المتاح.</p>
         </details>
                 <div class="section-cta">
           <div class="cta-row">
@@ -993,9 +1021,12 @@
         <img src="data:image/png;base64,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" width="362" height="114" alt="WeGolden" loading="lazy">
       </a>
       <p class="path">wegolden-mena.com/ar/syria</p>
+      <div class="social-icons">
+        <a class="social-icon social-tg" href="https://t.me/wegoldenmena" rel="noopener noreferrer" target="_blank" aria-label="تيليغرام WeGolden MENA"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M21.5 3.3 18.3 20.1c-.24 1.07-.87 1.33-1.76.83l-4.87-3.59-2.35 2.26c-.26.26-.48.48-.98.48l.35-4.97 9.05-8.18c.39-.35-.09-.54-.6-.2l-11.18 7.04-4.82-1.5c-1.05-.33-1.07-1.05.22-1.56L20 3.05c.87-.33 1.63.2 1.5.25z"/></svg></a>
+        <a class="social-icon social-fb" href="https://www.facebook.com/WeGoldenSyria" rel="noopener noreferrer" target="_blank" aria-label="فيسبوك WeGolden Syria"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07C2 17.1 5.66 21.26 10.44 22v-7.03H7.9v-2.9h2.54V9.85c0-2.52 1.49-3.91 3.77-3.91 1.09 0 2.24.2 2.24.2v2.48h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.44 2.9h-2.34V22C18.34 21.26 22 17.1 22 12.07z"/></svg></a>
+        <a class="social-icon social-ig" href="https://www.instagram.com/wegolden_syria/" rel="noopener noreferrer" target="_blank" aria-label="إنستغرام WeGolden Syria"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm0 2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H7zm11 1.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4zM12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg></a>
+      </div>
       <div class="links">
-        <a href="https://t.me/wegoldenmena" rel="noopener noreferrer" target="_blank">تيليغرام: t.me/wegoldenmena</a>
-        <a href="https://www.facebook.com/WeGoldenMena" rel="noopener noreferrer" target="_blank">فيسبوك / ماسنجر: facebook.com/WeGoldenMena</a>
         <a data-wa-link href="https://wa.me/PLACEHOLDER_NUMBER?text=" rel="noopener noreferrer" target="_blank">واتساب</a>
         <a href="https://wegolden-mena.com/ar" rel="noopener">الموقع الرسمي: wegolden-mena.com/ar</a>
         <a href="https://wegolden-mena.com/licenses/" target="_blank" rel="noopener">التراخيص</a>
@@ -1028,7 +1059,8 @@
         "logo": "https://wegolden-mena.com/wp-content/themes/wegolden-mena/images/logo.png",
         "sameAs": [
           "https://t.me/wegoldenmena",
-          "https://www.facebook.com/WeGoldenMena"
+          "https://www.facebook.com/WeGoldenSyria",
+          "https://www.instagram.com/wegolden_syria/"
         ],
         "identifier": [
           {
@@ -1116,7 +1148,7 @@
             "name": "كيف أتواصل معكم؟",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "يمكنكم التواصل عبر تيليغرام أو ماسنجر فيسبوك، أو عبر واتساب بعد ربط الرقم الرسمي. خدمة واتساب للأعمال قد لا تصل إلى الأرقام السورية (+963)؛ تيليغرام يبقى البديل المتاح."
+              "text": "يمكنكم التواصل عبر تيليغرام، أو عبر صفحتي فيسبوك وإنستغرام WeGolden Syria، أو عبر واتساب بعد ربط الرقم الرسمي. قناة تيليغرام الحالية هي قناة WeGolden MENA. خدمة واتساب للأعمال قد لا تصل إلى الأرقام السورية (+963)؛ تيليغرام يبقى البديل المتاح."
             }
           }
         ]
