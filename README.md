@@ -6,9 +6,10 @@ This folder is a git-ready copy of the Arabic RTL landing page intended for `htt
 
 ## Files
 
-- `index.html` — page with logo, favicon and mascot also embedded as data URIs; the landing video is a separate file under `assets/`
+- `index.html` — page with logo and favicon also embedded as data URIs; the mascot and landing video are separate files
 - `wegolden-logo.png` — official WeGolden wordmark
-- `wegolden-mena-mascot.png` — official WeGolden MENA mascot (Telegram `@wegoldenmena` avatar)
+- `wegolden-mena-mascot.png` — official WeGolden MENA mascot, transparent PNG (Hamed delivery, celebrating pose), 622×800
+- `wegolden-mena-mascot.webp` — same mascot as WebP
 - `wegolden-favicon.png` — official favicon
 - `assets/wg-syria-video.mp4` — 30s Arabic landing video (H.264/AAC, 1280×720, +faststart), re-encoded from Drive `content` / `Second Version` / `WeGolden-30s-Glass-16x9-AR.mp4`
 - `assets/wg-syria-video-poster.jpg` — poster frame from the same video
