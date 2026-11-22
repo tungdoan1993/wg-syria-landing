@@ -6,7 +6,7 @@ This folder is a git-ready copy of the Arabic RTL landing page intended for `htt
 
 ## Files
 
-- `index.html` — page with logo and favicon also embedded as data URIs; the mascot and landing video are separate files
+- `index.html` — RTL landing page (IBM Plex Sans Arabic). Logo, favicon, mascot and video are separate files in this folder / `assets/`
 - `wegolden-logo.png` — official WeGolden wordmark
 - `wegolden-mena-mascot.png` — official WeGolden MENA mascot, transparent PNG (Hamed delivery, celebrating pose), 622×800
 - `wegolden-mena-mascot.webp` — same mascot as WebP
