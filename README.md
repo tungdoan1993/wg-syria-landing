@@ -21,7 +21,7 @@ The working copy also lives at `/workspace/wg-syria/landing-syria-ar.html`. A pr
 Edit **one** JavaScript constant near the bottom of `index.html`:
 
 ```js
-const WHATSAPP_NUMBER = 'PLACEHOLDER_NUMBER';
+const WHATSAPP_NUMBER = '971543999186';
 ```
 
 Replace it with the business number in international format, digits only, no `+` or spaces. Example:
@@ -41,7 +41,7 @@ Confirmed: open-account CTAs point to `https://my.wegolden.com`. The minimum dep
 1. Remove `<meta name="robots" content="noindex, nofollow">`.
 2. Confirm the page is actually served at `https://wegolden-mena.com/ar/syria/` (this path is not live today; it currently 404s after a redirect to `/syria/`).
 3. Have a native Arabic speaker review the copy.
-4. Replace `PLACEHOLDER_NUMBER` as above.
+4. WhatsApp number is set to +971 54 399 9186 (WeGolden MENA).
 
 ## TODO-VERIFY
 
